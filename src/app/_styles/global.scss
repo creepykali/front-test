@@ -29,7 +29,7 @@
     /* 16 */
     --font-size-default: 1rem;
     /* 18 */
-    --font-size-sm: 1.125rem;
+    --font-size: 1.125rem;
     /* 20 */
     --font-size-md: 1.25rem;
     /* 24 */
@@ -96,12 +96,80 @@ $container-max-widths: (
 
 body {
     --bs-body-font-family: var(--font-poppins);
-    --bs-body-bg: --color-palette-gray-00;
+    --bs-body-bg: var(--color-palette-gray-000);
+}
+
+.container {
+    position: relative;
 }
 
 .nav {
-    --bs-link-color: --color-palette-gray-600;
+    --bs-link-color: var(--color-palette-gray-600);
 }
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-brand-primary-base) !important;
+}
+
+.btn {
+    --bs-btn-padding-y: 0.813rem !important;
+    --bs-btn-font-weight: 600 !important;
+    --bs-btn-color: var(--color-brand-primary-base) !important;
+    --bs-border-radius: 0.313rem;
+}
+
+.btn:hover {
+    color: #fb8954 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: transparent !important;
+    border-color: #fb8954 !important;
+}
+
+.btn-primary {
+    --bs-btn-color: white !important;
+}
+
+@media (min-width: 960px) {
+    .btn-primary {
+        --bs-btn-padding-x: 3.125rem !important;
+    }
+}
+
+.btn-primary:hover {
+    color: white !important;
+}
+
+.btn-lg {
+    font-size: 1.125rem !important;
+    font-weight: 500 !important;
+}
+
+
+/* Utils */
+
+small {
+    font-size: 0.75rem !important;
+}
+
+.font-sm-2 {
+    font-size: var(--font-size);
+}
+
+.shadow-sm {
+    --bs-box-shadow-sm: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+}
+
+.shadow {
+    --bs-box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.24);
+}
+
+.shadow-lg {
+    --bs-box-shadow-lg: 0px 16px 80px 0px rgba(254, 147, 94, 0.2);
+}
+
 
 /* Global CSS
    ========================================================================== */
@@ -117,6 +185,43 @@ body {
 h1,
 h2 {
     font-family: var(--font-volkhov);
+}
+
+/* Misc custom */
+.mb-6 {
+    margin-bottom: var(--spacing-size-xl-2);
+}
+
+.line-height-2x {
+    line-height: 2;
+}
+
+.bg-planes {
+    position: absolute;
+    right: 0;
+    width: auto !important;
+    top: 20px;
+}
+
+@media (min-width: 720px) {
+    .bg-planes {
+        top: 25%;
+        right: -100px;
+    }
+}
+
+@media (min-width: 960px) {
+    .bg-planes {
+        top: 15%;
+        right: -110px;
+    }
+}
+
+@media (min-width: 1170px) {
+    .bg-planes {
+        top: 22%;
+        right: 0;
+    }
 }
 
 /* Bootstrap import

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Volkhov } from "next/font/google";
 import "./_styles/global.scss"
-import BsImport from "./_libs/bs-import";
+import BsImport from "./_parts/bs-import";
 import Header from "./_components/header";
 
 const poppins = Poppins({
