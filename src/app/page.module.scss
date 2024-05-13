@@ -1,0 +1,89 @@
+/* Hero specifics */
+
+.customSection {
+    padding-top: var(--spacing-size-lg);
+    padding-bottom: var(--spacing-size-lg);
+}
+
+@media (min-width: 960px) {
+    .customSection {
+        padding-top: var(--spacing-size-xxl);
+        padding-bottom: var(--spacing-size-xxl);
+    }
+
+}
+
+.customSection:first-child {
+    padding-top: 0;
+}
+
+.searchBar {
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 80px 2px #0000000F;
+    border-radius: 10px;
+    padding: 2rem 1.25rem;
+}
+
+@media (min-width: 960px) {
+    .searchBar {
+        max-width: 80%;
+    }
+}
+
+.bgGray {
+    background-color: var(--color-palette-gray-100);
+}
+
+@media (min-width: 720px) {
+    .heroImageWidth {
+        max-width: 150% !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .heroImageWidth {
+        max-width: 130% !important;
+    }
+}
+
+/* Cards with background */
+
+@mixin vector-color($color) {
+    background-image: url('data:image/svg+xml,<svg width="368" height="277" viewBox="0 0 368 277" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1C11 22 140.5 15 213.5 116.5C286.5 218 276 267.5 367.5 274.5" stroke="#{$color}" stroke-width="4"/></svg>');
+}
+
+.cardWithBg {
+    height: 278px;
+    position: relative;
+}
+
+.cardWithBg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.cardsRow .cardsCol:nth-child(1) .cardWithBg::before {
+    @include vector-color("%23FFF8F5");
+    transform: scaleX(-1) rotate(180deg);
+}
+
+.cardsRow .cardsCol:nth-child(2) .cardWithBg::before {
+    @include vector-color("%23F5F9FF");
+}
+
+.cardsRow .cardsCol:nth-child(3) .cardWithBg::before {
+    @include vector-color("%23FFFAF0");
+    transform: scaleX(-1) rotate(180deg);
+}
+
+.cardWithBg img {
+    margin-bottom: 3rem;
+}
+
+.cardWithBg p {
+    margin-top: 1rem;
+}

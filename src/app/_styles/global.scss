@@ -158,15 +158,15 @@ small {
     font-size: var(--font-size);
 }
 
-.shadow-sm {
+.btn-shadow-sm {
     --bs-box-shadow-sm: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
 }
 
-.shadow {
+.btn-shadow {
     --bs-box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.24);
 }
 
-.shadow-lg {
+.btn-shadow-lg {
     --bs-box-shadow-lg: 0px 16px 80px 0px rgba(254, 147, 94, 0.2);
 }
 
@@ -203,23 +203,17 @@ h2 {
     top: 20px;
 }
 
-@media (min-width: 720px) {
-    .bg-planes {
-        top: 25%;
-        right: -100px;
-    }
-}
 
-@media (min-width: 960px) {
+@media (min-width: 1040px) {
     .bg-planes {
         top: 15%;
-        right: -110px;
+        right: 0;
     }
 }
 
 @media (min-width: 1170px) {
     .bg-planes {
-        top: 22%;
+        top: 20px;
         right: 0;
     }
 }

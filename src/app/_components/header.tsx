@@ -1,9 +1,11 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../_assets/logo.svg'
-
+import { useRouter } from 'next/navigation'
 
 export default function Header() {
+    const router = useRouter()
     return (
         <div className="container">
             <nav className="navbar navbar-expand-lg py-3 mb-4 mt-3">
@@ -35,8 +37,8 @@ export default function Header() {
                         </ul>
 
                         <div className="text-lg-end d-flex flex-column flex-lg-row">
-                            <button type="button" className="btn me-4">Entrar</button>
-                            <button type="button" className="btn btn-primary shadow">Cadastro</button>
+                            <button type="button" className="btn me-4"  onClick={() => router.push('/login')}>Entrar</button>
+                            <button type="button" className="btn btn-primary btn-shadow">Cadastro</button>
                         </div>
                     </div>
                 </div>
